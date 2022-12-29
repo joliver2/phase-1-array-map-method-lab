@@ -11,6 +11,21 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+const mySentence = "freeCodeCamp is an awesome resource";
+const words = mySentence.split(" ");
+
+words.map((word) => { 
+    return word[0].toUpperCase() + word.substring(1); 
+}).join(" ");
+
+
+
+const titleCased = function capitalizeWords() {
+  return tutorials.map(element => {
+    return element.split(' ').map(word => {
+      return word[0].toUpperCase() + word.substring(1)
+    }).join(' ');
+  });
 }
+
+
